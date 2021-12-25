@@ -1,0 +1,18 @@
+.column{
+    margin:5% 20% ;
+    border:2px;
+    padding:5% 15%;
+}
+
+body{
+    background: blue url('images/Books-for-Survey.jpg') no-repeat;
+    background-size: cover;
+}
+
+ p, h4, h3 {
+    color: grey;
+}
+
+h1 {
+    color:black
+}

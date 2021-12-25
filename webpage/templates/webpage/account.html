@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% extends 'base.html' %}
+<body>
+{% block content %}
+<div class="column">
+<h3>create account</h3>
+<style>
+    h5{
+        color:red;
+    }
+</style>
+<form action="{% url 'account' %}" method="post">
+{% csrf_token %}
+    {% for message in messages %}
+    <h5>{{ message }}</h5>
+    {% endfor %}
+    <p>username:</p>
+    <input type="text" name="username">
+    <p>email:</p>
+    <input type="email" name="email">
+    <p>password:</p>
+    <input type="password" name="password">
+    <p>repeat password:</p>
+    <input type="password" name="password1"><br>
+    <input type="submit">
+</form>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

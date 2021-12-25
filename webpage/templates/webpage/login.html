@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    {% extends 'base.html'%}
+</head>
+<body>
+{% block content %}
+<div class="column">
+<h4>Please Enter Your Credentials</h4>
+<style>
+    h5{
+        color:red
+    }
+</style>
+{% for message in messages %}
+<h5>{{message}}</h5>
+{% endfor %}
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <p>username:</p>
+    <input name="username" type="text">
+    <p>password:</p>
+    <input type="password" name="password"><br>
+    <p></p>
+    <input type="submit">
+    <br>
+
+    <a href="{% url 'account' %}">sign up</a>
+</form>
+</div>
+{% endblock%}
+
+</body>
+</html>
