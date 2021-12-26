@@ -1,1 +1,1 @@
-web:gunicorn Medium.wsgi
+web: gunicorn Medium.wsgi
